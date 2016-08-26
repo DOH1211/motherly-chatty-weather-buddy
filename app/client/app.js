@@ -5,7 +5,7 @@ angular.module('chattyWeather', [
   ])
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
-	  .when('/weather', {
+	  .when('/', {
 	    templateUrl: 'weather/weather.html',
 	    controller: 'WeatherController'
 	  })
