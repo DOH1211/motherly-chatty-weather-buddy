@@ -1,4 +1,3 @@
-var weatherController = require('../weather/weatherController.js');
 var util = require('./util.js');
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
     var avgTemperature = 0;
     var events = [];
 
-    for(let i = 0; i < 12; i++) {
+    for(var i = 0; i < 12; i++) {
       avgTemperature += hourlyData[i].temperature / 12;
     }
     temperature = util.fahrenheitToString(avgTemperature);
@@ -19,7 +18,7 @@ module.exports = {
 
     req.body = {
       temperature: temperature, 
-      weatherEvent: weatherEvent.slice(0, 5)
+      weatherEvent: weatherEvent//.slice(0, 5)
     };
 
     req.query = req.body;

@@ -10,6 +10,7 @@ module.exports = {
     .where('weatherEvent').equals(req.body.weatherEvent)
     .exec(function(err, phrases) {
       if(err) console.log(err)
+        console.log(phrases);
       res.json(phrases);
     });
   },
